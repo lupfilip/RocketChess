@@ -371,7 +371,7 @@ window.onload = function() {
 
     function place(index) {
         return function() {
-            if(!square[index].hasChildNodes()) {
+            if(!square[index].hasChildNodes() && square[index].classList.contains("selected")) {
                 square[index].innerHTML = placer[0];
                 placer = undefined;
     
