@@ -1,7 +1,7 @@
 var pieceImage = "./Media/Images/Pieces/";
 var piece = [
-    "Pawn_white.png", "Knight_white.png", "Bishop_white.png", "Rook_white.png", "Queen_white.png", "King_white.png", 
-    "Pawn_black.png", "Knight_black.png", "Bishop_black.png", "Rook_black.png", "Queen_black.png", "King_black.png"
+    "SideWallWhite.png", "SupporterWhite.png", "SideWallWhite.png", "GoalPostWhite.png", "CaptainWhite.png", "ball.png", 
+    "SideWallBlack.png", "SupporterBlack.png", "SideWallBlack.png", "GoalPostBlack.png", "CaptainBlack.png", "ball.png"
 ];
 
 var square = document.getElementsByClassName("square");
