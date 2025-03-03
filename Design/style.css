@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-family: monospace;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.header, .footer {
+    background-color: rgb(0, 130, 255);
+    text-align: center;
+    padding-block: 16px;
+}
+
+h1, h2, a {
+    user-select: none;
+    text-shadow: 2px 2px 4px rgb(32, 32, 32);
+    color: white;
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.25s ease-out;
+}
+
+a:hover {
+    color: rgb(32, 32, 32);
+    text-shadow: 2px 2px 4px rgb(248, 248, 248);
+}
+
+.content {
+    max-height: calc(100vh - 136px);
+    height: 100vh;
+    width: 80%;
+    padding-inline: 10%;
+    background-color: rgb(248, 255, 255);
+    overflow: auto;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.content > h3 {
+    font-size: 24px;
+    margin-block: 24px;
+}
+
+.content > p {
+    font-size: 16px;
+    margin-block: 24px;
+    line-height: 32px;
+}
+
+.content > img {
+    display: block;
+    margin: auto;
+    margin-block: 24px;
+}
+
+.square {
+    transform: scale(1, -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% / 8);
+    aspect-ratio: 1;
+}
+
+.dark {
+    background-color: rgb(115, 215, 255);
+}
+
+.light {
+    background-color: rgb(225, 245, 255);
+}
+
+#board {
+    transform: scale(1, -1);
+    margin: auto;
+    height: calc(100% - 16px);
+    aspect-ratio: 1;
+    display: flex;
+    flex-wrap: wrap;
+    border: 4px solid rgb(128, 128, 128);
+}
+
+#info {
+    display: block;
+}
+
+.contain100 {
+    width: 100%;
+    height: 100%;
+}
+
+.contain90 {
+    width: 90%;
+    height: 90%;
+}
+
+.contain80 {
+    width: 80%;
+    height: 80%;
+}
+
+.contain100px {
+    width: 100px;
+    height: 100px;
+}
+
+.contain600px {
+    width: 600px;
+    height: 600px;
+}
+
+.selected {
+    background-color: rgb(250, 255, 205);
+}
+
+img {
+    user-select: none;
+}
+
+.move {
+    background-color: rgb(250, 255, 205);
+    border: 2px solid rgb(32, 32, 32);
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+.goal {
+    border: 1px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 90%;
+    aspect-ratio: 1 / 1;
+}
+
+@media(max-width: 768px) {
+    .content {
+        padding: 0;
+        width: 100%;
+    }
+
+    #board {
+        height: 68%;
+    }
+
+
+}
