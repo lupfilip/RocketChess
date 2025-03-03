@@ -48,7 +48,7 @@ function setBorders() {
         var pieceIMG = "<img class='contain80 static bishop' src='"+pieceImage + piece[2 + 6 * i]+"' alt='piece'>";
         board.children[1 + 56 * i].innerHTML = pieceIMG;
         board.children[6 + 56 * i].innerHTML = pieceIMG;
-        var pieceIMG = "<img class='contain80 static goal' src='"+pieceImage+"goal.png' alt='piece'>";
+        var pieceIMG = "<img class='contain100 static goal' src='"+pieceImage+"goal.png' alt='piece'>";
         board.children[3+i].innerHTML = pieceIMG;
         board.children[i + 59].innerHTML = pieceIMG;
     }
