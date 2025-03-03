@@ -34,21 +34,21 @@ function setBorders() {
     for(var i = 0; i <= 7; i++) {
         var pieceIMG = "";
         if(i < 4)
-            pieceIMG = "<img class='contain100 static pawnWhite' src='"+pieceImage + piece[6 * (i >= 4)]+"' alt='piece'>";
+            pieceIMG = "<img class='contain80 static pawnWhite' src='"+pieceImage + piece[6 * (i >= 4)]+"' alt='piece'>";
         else 
-            pieceIMG = "<img class='contain100 static pawnBlack' src='"+pieceImage + piece[6 * (i >= 4)]+"' alt='piece'>";
+            pieceIMG = "<img class='contain80 static pawnBlack' src='"+pieceImage + piece[6 * (i >= 4)]+"' alt='piece'>";
         board.children[i * 8].innerHTML = pieceIMG;
         board.children[i * 8 + 7].innerHTML = pieceIMG;
     }
 
     for(var i = 0; i <= 1; i++) {
-        var pieceIMG = "<img class='contain100 static rook' src='"+pieceImage + piece[3 + 6 * i]+"' alt='piece'>";
+        var pieceIMG = "<img class='contain80 static rook' src='"+pieceImage + piece[3 + 6 * i]+"' alt='piece'>";
         board.children[2 + 56 * i].innerHTML = pieceIMG;
         board.children[5 + 56 * i].innerHTML = pieceIMG;
-        var pieceIMG = "<img class='contain100 static bishop' src='"+pieceImage + piece[2 + 6 * i]+"' alt='piece'>";
+        var pieceIMG = "<img class='contain80 static bishop' src='"+pieceImage + piece[2 + 6 * i]+"' alt='piece'>";
         board.children[1 + 56 * i].innerHTML = pieceIMG;
         board.children[6 + 56 * i].innerHTML = pieceIMG;
-        var pieceIMG = "<img class='contain100 static goal' src='"+pieceImage+"goal.png' alt='piece'>";
+        var pieceIMG = "<img class='contain80 static goal' src='"+pieceImage+"goal.png' alt='piece'>";
         board.children[3+i].innerHTML = pieceIMG;
         board.children[i + 59].innerHTML = pieceIMG;
     }
