@@ -8,6 +8,8 @@ var square = document.getElementsByClassName("square");
 var transfer;
 var placer;
 var turn = false;
+var goalCount = [0, 0];
+var turnCount = 1;
 
 function createBoard() {
     var board = document.getElementById("board");
@@ -460,6 +462,10 @@ window.onload = function() {
         else {
             this.innerHTML = transfer[0];
             transfer[0] = "";
+            if(turn) {
+                turnCount++;
+                document.getElementById("turn").innerHTML = "Turns: " + turnCount;
+            }
             turn = !turn;
         }
 
@@ -495,6 +501,10 @@ window.onload = function() {
         }
 
         if((Math.floor(parseInt(copy[1]) / 8)) % 7 == 0) {
+            if(Math.floor(parseInt(copy[1]) / 8) == 7) goalCount[0]++;
+            else goalCount[1]++;
+            let goal = document.getElementById("goal");
+            goal.innerHTML = goalCount[0] + " : " + goalCount[1];
             createBoard();
             setBorders();
             startPos(turn);
