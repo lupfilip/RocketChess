@@ -301,12 +301,15 @@ function ballMove(index, depthStart, depth, dir, dirStart) {
                 for(let i = 0; i < 8; i++) {
                     if(!square[index + bonus[i]].hasChildNodes()) {
                         found = true;
-                        let result = ballMove(index + bonus[i], depthStart, depth - 1, i, i);
+                        let result = ballMove(index, depthStart, depth, i, i);
                         for(let j = 0; j < result.length; j++) {
                             if(moves.includes(result[j])) continue;
                             else moves.push(result[j]);
 
                         }
+                    }
+                    else if(square[index + bonus[i]].children[0].classList.contains("goal")) {
+                        moves.push(index + bonus[i]);
                     }
                 }
 
