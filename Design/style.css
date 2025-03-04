@@ -159,5 +159,14 @@ img {
         height: 68%;
     }
 
+    #info {
+        padding-inline: 2.5%;
+        width: 90%;
+    }
 
+    #info img {
+        width: 50%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
 }

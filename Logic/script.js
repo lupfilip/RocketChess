@@ -494,10 +494,28 @@ window.onload = function() {
                     dir = 7;
             }
 
+            let audio = new Audio();
+            audio.src = "Media/Audio/kick.mp3";
+            audio.play();
+
             selectBall(copy, dir);
         }
         else if(copy[2].classList.contains("piece")) {
+            let audio = new Audio();
+            audio.src = "Media/Audio/net.mp3";
+            audio.play();
+
             placePiece(copy);
+        }
+        else if(copy[2].classList.contains("goal")) {
+            let audio = new Audio();
+            audio.src = "Media/Audio/net.mp3";
+            audio.play();
+        }
+        else {
+            let audio = new Audio();
+            audio.src = "Media/Audio/walk.mp3";
+            audio.play();
         }
 
         if((Math.floor(parseInt(copy[1]) / 8)) % 7 == 0) {
@@ -519,6 +537,7 @@ window.onload = function() {
     }
 
     function selectBall(ball, dir) {
+
         clearHighlight();
         for(var i = 0; i < 64; i++) {
             square[i].removeEventListener("click", selectSquare);
@@ -600,7 +619,6 @@ window.onload = function() {
 
 
 //------------
-
 
     createBoard();
     setBorders();

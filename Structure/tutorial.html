@@ -16,16 +16,15 @@
         <p>The playing field has the following position:</p>
         <img class="contain600px" src="../Media/Images/defaultPos.png" alt="Defautl position">
         <p>Elements on board are named:</p>
-        <p>Pawn = SideWall</p><img class="contain100px" src="../Media/Images/Pieces/Pawn_white.png" alt="sideWall">      
-        <p>Bishop = BackWall</p><img class="contain100px" src="../Media/Images/Pieces/Bishop_white.png" alt="backWall">   
-        <p>Rook = Goal Post</p><img class="contain100px" src="../Media/Images/Pieces/Rook_white.png" alt="GoalPost">   
+        <p>Pawn/Bishop = Wall</p><img class="contain100px" src="../Media/Images/Pieces/SideWallWhite.png" alt="sideWall">  
+        <p>Rook = Goal Post</p><img class="contain100px" src="../Media/Images/Pieces/GoalPostWhite.png" alt="GoalPost">   
         <p>Grid = Goal/Net</p><img class="contain100px" src="../Media/Images/Pieces/goal.png" alt="Goal">
         <p>This pieces cannot be moved or captured by any player or piece. Walls are different because they can affect the movement of the ball. <em>(Section: "The ball")</em></p>
         
         <h3>Player pieces</h3>
         <p>Each player controls 2 type of pieces:</p>
-        <p>2 supporters (KNIGHT = SUPPORTER)</p><img class="contain100px" src="../Media/Images/Pieces/Knight_white.png" alt="supporter">
-        <p>1 captain (QUEEN = CAPTAIN)</p><img class="contain100px" src="../Media/Images/Pieces/Queen_white.png" alt="captain">
+        <p>2 supporters (KNIGHT = SUPPORTER)</p><img class="contain100px" src="../Media/Images/Pieces/SupporterWhite.png" alt="supporter">
+        <p>1 captain (QUEEN = CAPTAIN)</p><img class="contain100px" src="../Media/Images/Pieces/CaptainWhite.png" alt="captain">
         <p>Supporters move as knights.</p>
         <p>Captains move as queens.</p>
         <p>They can capture opponents pieces.</p> 
@@ -35,20 +34,23 @@
         <h3>The ball</h3>
         <p>This piece is neutral. We can use KING = BALL.</p>
         <div style="display: flex; justify-content: center; align-items: center;">
-            <img class="contain100px" src="../Media/Images/Pieces/King_white.png" alt="king" style="display: inline">
             <img class="contain100px" src="../Media/Images/Pieces/ball.png" alt="Ball" style="display: inline">
         </div>
         <p>The ball moves when a piece captures it. It can move up to 3 squares, where it can bounce along the way.</p>
-        <p>From side walls it bounces:</p>
-        <p>From back walls it bounces:</p>
-        <p>From goal posts it bounces:</p>
-        <p>From captains it bounces:</p>
-        <p>From supporters it bounces:</p>
+        <p>From walls it bounces reverse diagonally if bounced diagonally from opponents side else it bounces in any direction.</p>
+        <p>From goal posts it bounces reverse direction if bounced orthogonally else it bounces any direction.</p>
+        <p>From captains it bounces reverse direction.</p>
+        <p>From supporters it bounces in any direction.</p>
         <p>The ball is the only piece that can enter into a goal.</p>
         <p>The balls starting square is dependent who is on turn (image shows only white on turn. Otherwise for black on turn the ball mirrors diagonally):</p>
+        <img class="contain600px" src="../Media/Images/startPos2.png" alt="Defautl position">
         
         <h3>Gameplay</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque volutpat vulputate metus, a consectetur dui cursus ut. Aliquam ac scelerisque lorem, vitae posuere ex. Curabitur ac nunc odio. Aenean dui risus, vehicula in lorem eu, placerat laoreet erat. Sed imperdiet tortor aliquet felis tincidunt condimentum. Cras vitae purus tellus. Aenean velit orci, porttitor vitae quam aliquet, faucibus vehicula tellus. Nam sit amet sem tincidunt sapien pulvinar elementum id at mi. Nullam volutpat eros arcu, ac pellentesque neque malesuada sit amet. Vivamus vel nulla at elit laoreet venenatis.</p>
+        <p>
+            Players usually play 50 moves per player where they try to make as many goals as possible. 
+            After each goal the board resets.
+            Player with most goals wins.
+        </p>
     </div>
     <div class="footer">
         <div><a href="../index.html">Main page</a></div>
