@@ -550,9 +550,9 @@ window.onload = function() {
         var move = [];
         
         if(square[parseInt(ball[1])].children[0].classList.contains("knight"))
-            move = ballMove(parseInt(ball[1]), 3, 3, 8);
+            move = ballMove(parseInt(ball[1]), 3, 3, 8, 8);
         else if(square[parseInt(ball[1])].children[0].classList.contains("queen")) {
-            move = ballMove(parseInt(ball[1]), 3, 3, dir);
+            move = ballMove(parseInt(ball[1]), 3, 3, dir, dir);
         }
 
         for(var j = 0; j < move.length; j++) {
